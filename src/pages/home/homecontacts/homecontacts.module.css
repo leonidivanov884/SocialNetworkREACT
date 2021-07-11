@@ -1,0 +1,20 @@
+.contacts{
+  display: flex;
+  align-items: center;
+  padding: 10px 25px 0;
+}
+.contacts li{
+
+}
+
+
+.contacts li{}
+.contacts li a svg{
+  margin-right: 7px;
+}
+.contacts li a{
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+}

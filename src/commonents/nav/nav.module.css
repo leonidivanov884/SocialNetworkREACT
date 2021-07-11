@@ -1,0 +1,25 @@
+.nav{
+  width: 285px;
+  flex-shrink: 0;
+  padding: 20px 15px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-right: 20px;
+}
+.nav ul li svg{
+  margin-right: 15px ;
+}
+.nav ul li svg path{
+  fill: var(--color-main-blur);
+}
+.nav ul li a{
+  padding: 14px 0 14px 20px;
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+}
+.nav ul:nth-child(2){
+  padding-top: 10px;
+  border-top: 1px solid var( --border);
+  margin-top: 15px;
+}

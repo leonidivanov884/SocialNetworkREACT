@@ -1,0 +1,46 @@
+.quickmenu{
+  display: flex;
+  align-items: center;
+  margin-left: 25px;
+}
+.quickmenu li {
+  margin-right: 10px;
+}
+.quickmenu li svg path{
+  fill: var( --color-main-blur);
+}
+.theme {
+  display: flex;  
+}
+.theme input{
+  position: absolute;
+  width: 1px;
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.theme label{
+  position: relative;
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  border: 2px solid var( --color-main-blur);
+  border-radius: 50px;
+  margin-right: 8px;
+}
+
+.theme label::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 3px;
+  width: 12px;
+  height: 12px;
+  background: var( --color-main-blur);
+  border-radius: 50%;
+  transition: left .3s;
+}
+.theme input:checked~label::before{
+  left: calc(100% - 15px);
+}

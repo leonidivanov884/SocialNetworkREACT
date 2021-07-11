@@ -1,38 +1,69 @@
-.App {
-  text-align: center;
+
+
+:root {
+  --bg-main: #0D1117;
+  --color-main: #FFFFFF;
+  --color-main-blur: #FFFFFF;
+  --color-main-blur2: #161B22;
+  --fon-fon: #161B22;
+  --bg-two: #161B22;
+  --border: #25282E;
+  --blue: #58A6FF;
+}
+.app#light {
+   --border: #F8F7FA;
+  --bg-main: #F8F7FA;
+  --bg-two: #fff;
+  --fon-fon: #F8F7FA;
+  --color-main-blur2: rgba(#242424, .5);
+  --color-main-blur: #2E3A59;
+  --color-main: #242424;
+  --blue: #2E3A59;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+@font-face {
+  font-family: 'SeoulNamsan';
+  src:url('./fonts/SeoulNamsan-CB.ttf.woff') format('woff'),
+      url('./fonts/SeoulNamsan-CB.ttf.svg#SeoulNamsan-CB') format('svg'),
+      url('./fonts/SeoulNamsan-CB.ttf.eot'),
+      url('./fonts/SeoulNamsan-CB.ttf.eot?#iefix') format('embedded-opentype'); 
+  font-weight: normal;
+  font-style: normal;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.wrapper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: flex-start;
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.app{
+  background: var(--bg-main);
+  color: var(--color-main);
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+   
+}
+*,a{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  color: var(--color-main);
+  text-decoration: none;
+}
+ul,li {
+  display: block;
+}
+.content{
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 13px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  padding-bottom: 50px;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

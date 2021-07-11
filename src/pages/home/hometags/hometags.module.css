@@ -1,0 +1,11 @@
+.tags{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 25px 0;
+}
+.tags li a{
+  margin-right: 10px;
+  font-size: 14px;
+  opacity: 0.5;
+
+}

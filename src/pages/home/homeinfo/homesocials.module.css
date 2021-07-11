@@ -1,0 +1,11 @@
+.socials{
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.socials li a svg path{
+  fill: var(--color-main-blur);
+}
+.socials li a{
+  margin-left: 8px;
+}

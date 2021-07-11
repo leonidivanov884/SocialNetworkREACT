@@ -1,0 +1,25 @@
+.news {
+  margin-bottom: 30px;
+}
+
+.items{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 14px;
+  overflow: hidden;
+}
+.item{
+  width: calc(50% - 2px);
+  height: 75px;
+  margin-bottom: 4px;
+}
+.item:nth-last-child(1),
+.item:nth-last-child(2){
+  margin-bottom: 0;
+}
+.item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

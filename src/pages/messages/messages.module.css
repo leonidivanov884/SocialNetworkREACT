@@ -1,0 +1,54 @@
+.message{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var( --bg-two);
+  margin: 15px 15px 0;
+  padding: 20px;
+  width: calc(100% - 30px);
+  border-radius: 8px;
+}
+
+.message.new{
+  border: 3px solid red;
+}
+.ava{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+.ava img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.message .box{
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;  
+  flex-grow: 1; 
+  
+}
+.name{
+  margin-bottom: 5px;
+  font-size: 18px;
+}
+.text{
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  display: flex;
+  font-size: 13px;
+  opacity: 0.5;
+  overflow: hidden;
+}
+.info{
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-size: 15px;
+  padding-left: 15px;
+}

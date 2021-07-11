@@ -1,0 +1,32 @@
+.area{
+  display: flex;
+  align-items: flex-end;
+  height: 70px;
+  width: 100%;
+  padding:  20px 25px 0;
+  order: 10;
+}
+.area textarea{
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--border);
+  resize: none;
+  height: 100%;
+  font-size: 15px;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.07em;
+}
+
+.area button{
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+.area button svg path{
+  fill: var(--blue);
+}

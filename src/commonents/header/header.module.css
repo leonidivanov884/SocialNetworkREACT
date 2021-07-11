@@ -1,0 +1,36 @@
+.header{
+  display: flex;
+  background: var(--bg-two);
+  height: 55px;
+  margin-bottom: 20px;
+}
+.row{
+  display: flex;
+  max-width: 1260px;
+  padding: 0 15px;
+  margin: 0 auto; 
+  width: 100%;
+}
+.logo{
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+.logo svg path {
+  fill: var( --color-main-blur);
+  width: 35px;
+  height: 35px;
+}
+.logo p {
+  letter-spacing: 0.03em;
+  font-size: 17px;
+  text-transform: uppercase;
+  margin-left: 10px;
+  color: var(--color-main);
+}
+.center{
+  display: flex;
+  width: 620px;
+  align-items: center;
+  flex-grow: 1;
+}
