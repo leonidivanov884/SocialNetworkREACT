@@ -13,10 +13,11 @@ import Nav from './commonents/nav/nav';
 import Aside from './commonents/aside/aside'
 import Home from './pages/home/home';
 import Tabs from './commonents/tabs/tabs';
-import Messages from './pages/messages/messages';
 import Photos from './pages/photos/photos';
 import Groups from './commonents/groups/groups';
 import Music from './pages/music/music';
+import MessagesContainer from './pages/messages/messagesContainer';
+
 
 
  
@@ -27,20 +28,19 @@ function App(props) {
       <div className="app" id={props.state.bodyTheme}>
         <Header dispatch={props.dispatch} bodyTheme={props.state.bodyTheme}/>
  
-        <div className="wrapper">
-          
+        <div className="wrapper">          
           <Nav />
 
           <div className="content">
               
               <Route exact path="/" >
-                <Home homePage={props.state.homePage} dispatch={props.dispatch}/>
+                <Home  />
               </Route>
               <Route  path="/tabs">
                 <Tabs />
               </Route>
               <Route  path="/messages">
-                <Messages messagesPage={props.state.messagesPage} dispatch={props.dispatch}/>
+                <MessagesContainer />
               </Route>
               <Route  path="/music">
                 <Music />

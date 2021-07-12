@@ -38,23 +38,21 @@ function MessagesItem(props){
 }
 
 function Messages(props){
-
-
-
-  let messegesItems = props.messagesPage.messages.map( (m) => <MessagesItem  id={m.id} name={m.name} text={m.text[0]} date={m.date} count={m.count}/>)
-    
+  
   return (     
     <Switch>    
       <Route exact path="/messages">
-        {messegesItems}
-      </Route> 
-      
-      {props.messagesPage.messages.map( (item, index) => (
-       
+        { props.messagesPage.messages.map( (m) => <MessagesItem  id={m.id} name={m.name} text={m.text[0]} date={m.date} count={m.count}/>) }
+      </Route>       
+      {props.messagesPage.messages.map( (item, index) => (       
           <Route key={index}  path={`/messages/` + item.id }>     
-             <Dialog  messages={props.messagesPage.messages[item.id - 1]} newMessageText={props.messagesPage.newMessageText} dispatch={props.dispatch}/> 
-          </Route>
-            
+             <Dialog  
+              messages={props.messagesPage.messages[item.id - 1]} 
+              newMessageText={props.messagesPage.newMessageText} 
+              onNewMessageText={props.onNewMessageText} 
+              onAddMessage={props.onAddMessage}
+            /> 
+          </Route>            
       ))}
     </Switch>   
  

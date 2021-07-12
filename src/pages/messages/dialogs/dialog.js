@@ -23,13 +23,13 @@ function Dialog (props) {
  
   let newMessageText = () => {    
     let text = newMessageElement.current.value;
-    props.dispatch( changeMessageActionCreator(text)); 
+    props.onNewMessageText(text); 
   }
  
   let addMessage = () => { 
     let nomber = props.messages.id - 1; // Убавляем на 1 из-за 0 в масиве
-
-    props.dispatch( addMessageActionCreator(nomber) );  
+    props.onAddMessage(nomber);  
+    
   }
 
   return (

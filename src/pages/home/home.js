@@ -6,6 +6,7 @@ import HomePanel from "./homepanel/homepanel";
 import HomePosts from "./homeposts/homeposts";
 
 import s from './home.module.css'
+import HomePostsContainer from './homeposts/homepostsContainer';
 
 
 
@@ -22,11 +23,7 @@ function Home(props){
 
       <HomeContacts />
       <HomePanel />
-      <HomePosts  
-        posts={props.homePage.posts}
-        newPostText={props.homePage.newPostText}
-        dispatch={props.dispatch}
-      />    
+      <HomePostsContainer  />    
     </div>
   )
 }

@@ -7,15 +7,15 @@ function Area (props) {
 
   let newPostElement = React.createRef();
 
- 
   let newText = () => {
     let text = newPostElement.current.value;
-    props.dispatch( newTextActionCreator(text) ); 
+    props.onNewText(text)
   }
  
- let addPost = () => { 
-    props.dispatch( addPostActionCreator() );  
+  let addPost = () => { 
+    props.onAddPost();  
   }
+  
 
   return (
     <div className={s.area}>

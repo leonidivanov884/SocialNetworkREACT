@@ -1,14 +1,10 @@
 import React from "react";
 import st from "./quickmenu.module.css";
-import { changeThemeActionCreator } from '../../redux/theme-reducer';
-
 
 
 
 function Quickmenu(props){
-  let newMessageText = () => {    
-    props.dispatch( changeThemeActionCreator()); 
-  }
+  
 
   return (  
     <ul className={st.quickmenu}>
@@ -34,7 +30,7 @@ function Quickmenu(props){
           </a>
       </li>
       <li className={st.theme}>
-          <input  type="checkbox" onChange={newMessageText} id="theme" />
+          <input  type="checkbox" onChange={props.onChangeTheme} id="theme" />
           <label for="theme" ></label>
           <p>Light theme</p>
       </li>

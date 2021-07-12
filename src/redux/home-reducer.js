@@ -27,6 +27,7 @@ let initialState = {
 
 
 const homeReducer = (state = initialState , action) => { 
+
   switch(action.type){
     case ADD_POST: 
       let newPost = {
@@ -35,12 +36,16 @@ const homeReducer = (state = initialState , action) => {
         text: state.newPostText,
         tags: 'Web Design'
       }      
-      state.posts.push(newPost)    
-      state.newPostText = ''
-      return state
-    case CHANGE_AREA:
-      state.newPostText = action.text
-      return state
+      return {
+        ...state,
+        posts: [...state.posts, newPost],
+        newPostText: ''
+      }    
+    case CHANGE_AREA:    
+      return {
+        ...state,
+        newPostText: action.text
+      }   
     default: 
       return state
   }   

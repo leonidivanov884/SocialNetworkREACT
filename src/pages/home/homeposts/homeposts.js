@@ -16,15 +16,13 @@ function Post (props) {
 }
 
 function HomePosts (props) {
-  let postsItems = props.posts.map( (p) =>  <Post date={p.date} text={p.text} tags={p.tags} />  )
-
+  
   return (
     <div className={s.posts}>     
-    
-      <Area  
-        newPostText={props.newPostText} 
-        dispatch={props.dispatch}/>
-       {postsItems}
+      <Area newPostText={props.homePage.newPostText} onAddPost={props.onAddPost} onNewText={props.onNewText}  />
+       {
+        props.homePage.posts.map( (p) =>  <Post date={p.date} text={p.text} tags={p.tags} />  )
+       }
     </div>
   )
 }

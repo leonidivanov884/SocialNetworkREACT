@@ -1,8 +1,9 @@
 import React from "react";
 import st from "./header.module.css";
 import Search from "../search/search";
-import Quickmenu from "../quickmenu/quickmenu";
+
 import Profile from "../profile/profile";
+import QuickMenuContainer from '../quickmenu/quickmenuContainer';
 
 
 
@@ -19,7 +20,7 @@ function Header(props){
         </a>
         <div className={st.center}>
           <Search />
-          <Quickmenu dispatch={props.dispatch} bodyTheme={props.bodyTheme}/>           
+          <QuickMenuContainer/>           
         </div>
         <Profile />        
       </div>        
