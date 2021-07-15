@@ -1,14 +1,16 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import s from './homepanel.module.css'
 
-function HomePanel () {
+function HomePanel (props) {
+  
   return (
     <ul className={s.panel}>
-      <li><a href="#">160 FOLOWERS</a></li>
-      <li><a href="#">15 POSTS</a></li>
-      <li><a href="#">5 PHOTOS</a></li>
-      <li><a href="#">2 VIDEOS</a></li>
-      <li><a href="#">9 MUSIC</a></li>
+      <li><Link to="/friends">{props.valFriends} FRIENDS</Link></li>
+      <li>{props.valPosts} POSTS</li>
+      <li><Link to="/photos">{props.valPhotos} PHOTOS</Link></li>
+      <li><Link to="">{props.valVideo} VIDEOS</Link></li>
+      <li><Link to="">{props.valMusic} MUSIC</Link></li>
     </ul>
   )
 }

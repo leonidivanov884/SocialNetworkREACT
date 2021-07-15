@@ -7,10 +7,7 @@ function Post (props) {
   return (
     <div className={s.post}>
       <p className={s.date}>{props.date}</p>
-      <p className={s.text}>{props.text}</p>
-      <ul className={s.tags}>
-           <li><a href="#">#{props.tags}</a></li> 
-      </ul>            
+      <p className={s.text}>{props.text}</p>              
     </div>       
   )
 }

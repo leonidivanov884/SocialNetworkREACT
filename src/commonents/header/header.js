@@ -2,16 +2,14 @@ import React from "react";
 import st from "./header.module.css";
 import Search from "../search/search";
 
-import Profile from "../profile/profile";
+
 import QuickMenuContainer from '../quickmenu/quickmenuContainer';
+import ProfileContainer from './../profile/profileContainer';
 
 
 
-function Header(props){
- 
-
-
-  return (
+function Header(){
+   return (
     <header className={st.header}>
       <div className={st.row}>
         <a className={st.logo} href='#'>
@@ -22,7 +20,7 @@ function Header(props){
           <Search />
           <QuickMenuContainer/>           
         </div>
-        <Profile />        
+        <ProfileContainer />        
       </div>        
     </header>
   )

@@ -13,6 +13,7 @@
   width: calc(50% - 2px);
   height: 75px;
   margin-bottom: 4px;
+  position: relative;
 }
 .item:nth-last-child(1),
 .item:nth-last-child(2){
@@ -22,4 +23,26 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: .3s;
+}
+.title{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 11px;
+  width: 80%;
+  text-align: center;
+  z-index: 2;
+  opacity: 0;
+  margin-top: 20px;
+  transition: all .3s;
+  
+}
+.item:hover .title{
+  margin-top: 0;
+  opacity: 1;
+}
+.item:hover img {
+  filter: brightness(40%);
 }

@@ -95,6 +95,7 @@
   display: block;
   color: var(--color-main);
   font-size: 15px;
+  max-width: 46%;
   border-radius: 7px;
 }
 .textarea{

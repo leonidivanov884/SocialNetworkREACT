@@ -3,12 +3,13 @@ import st from "./profile.module.css";
 
 
 
-function Profile(){
+function Profile(props){
+  
   return (  
     <div className={st.profile}>
-      <p>Leonid</p>
+      <p>{props.info.name}</p>
       <div className={st.ava}>
-        <img src="./ava.png" alt="avatar" />
+        <img src={props.info.avatar} alt="avatar" />
       </div>      
     </div>     
         

@@ -5,12 +5,13 @@ import  "./aside.css";
 import AsideCompany from "./asidecompany/asidecompany";
 import AsideFriend from "./asidefriend/asidefriend";
 import AsideGroups from "./asidegroups/asidegroups";
-import AsideNews from "./asidenews/asidenews";
+
+import AsideNewsContainer from "./asidenews/asidenewsContainer";
 
 function Aside(){
   return ( 
     <aside className="aside">
-      <AsideNews />
+      <AsideNewsContainer />
       <AsideGroups />
       <AsideCompany />
       <AsideFriend />

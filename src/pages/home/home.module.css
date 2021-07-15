@@ -5,16 +5,9 @@
   border-radius: 12px;
   overflow: hidden;
 }
-.baner {
-  width: 100%;
-  height: 150px;
-}
+
 .baner img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-.desc{
-  padding: 10px 25px 0;
-  font-size: 15px;
 }

@@ -3,16 +3,17 @@ import HomeSocials from './homesocials';
 
 import s from './homeinfo.module.css'
 
-function HomeInfo () {
+function HomeInfo (props) {
+  
   return (
     <div className={s.homeinfo}> 
-      <div className={s.ava}><img src="http://lorempixel.com/250/200" alt="" /></div>
+      <div className={s.ava}><img src={props.homeInfo.avatar} alt="" /></div>
       <div className={s.info}>
-        <p className={s.name}>Leonid Ivanov</p>
-        <p className={s.link}>@leonidivanovweb</p>
+        <p className={s.name}>{props.homeInfo.name}</p>
+        <p className={s.link}>{props.homeInfo.login}</p>
       </div>
       <div className={s.block}>
-        <HomeSocials />
+        <HomeSocials socials={props.homeInfo.socials}/>
         <a className={s.btn_edit} href="#">Edit profile</a>
       </div>
 

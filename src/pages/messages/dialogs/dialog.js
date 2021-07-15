@@ -31,7 +31,7 @@ function Dialog (props) {
     props.onAddMessage(nomber);  
     
   }
-
+  
   return (
       
     <div className={s.alldialog}>
@@ -43,7 +43,7 @@ function Dialog (props) {
           </svg>
         </Link>
         <Link to="" className={s.person}>
-          <div className={s.ava}><img src="./ava.png" alt="" /></div>
+          <div className={s.ava}><img src={props.ava} alt="" /></div>
           <div className={s.box}>
             <p className={s.name}>{props.messages.name}</p>
             <p className={s.status}>last seen 4 hour ago</p>

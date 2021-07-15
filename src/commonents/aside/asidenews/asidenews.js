@@ -1,30 +1,26 @@
 import React from "react";
 import s from "./asidenews.module.css";
+import { Link } from 'react-router-dom';
 
 
-function AsideNews() {
+function AsideNewsItem(props) {
+  return (
+    <Link to="" className={s.item}>
+      <h4 className={s.title}>{props.title}</h4>
+      <img src={props.img} alt="" />
+    </Link>
+  )
+}
+
+function AsideNews(props) {
+  
   return (
     <div className={s.news}>
        <h3>News</h3>
        <div className={s.items}>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
-         <div className={s.item}>
-           <img src='http://lorempixel.com/250/200' alt="" />
-         </div>
+         {props.news.map( item => (
+           <AsideNewsItem title={item.title} img={item.img} />
+         ))}
        </div>
     </div>
   )

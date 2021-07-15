@@ -13,10 +13,15 @@ import Nav from './commonents/nav/nav';
 import Aside from './commonents/aside/aside'
 import Home from './pages/home/home';
 import Tabs from './commonents/tabs/tabs';
-import Photos from './pages/photos/photos';
-import Groups from './commonents/groups/groups';
+
 import Music from './pages/music/music';
+import Friends from './pages/friends/friends';
 import MessagesContainer from './pages/messages/messagesContainer';
+import UsersContainer from './pages/friends/addfriends/UsersContainer';
+import PhotosContainer from './pages/photos/photosContainer';
+import Groups from './pages/groups/groups';
+import UserPage from './pages/home/userPage';
+
 
 
 
@@ -26,13 +31,10 @@ function App(props) {
   return (  
     <Router>
       <div className="app" id={props.state.bodyTheme}>
-        <Header dispatch={props.dispatch} bodyTheme={props.state.bodyTheme}/>
- 
+        <Header/> 
         <div className="wrapper">          
           <Nav />
-
-          <div className="content">
-              
+          <div className="content">              
               <Route exact path="/" >
                 <Home  />
               </Route>
@@ -49,11 +51,19 @@ function App(props) {
                 <Groups />
               </Route>
               <Route  path="/photos">
-                <Photos />
-              </Route>
-            
-          </div> 
-          
+                <PhotosContainer />
+              </Route> 
+              <Route  path="/friends">
+                <Friends />
+              </Route> 
+              <Route  path="/users">
+                <UsersContainer />
+              </Route>  
+              <Route  path="/userPage">
+                <UserPage />
+              </Route>  
+                        
+          </div>           
           <Aside />
         </div>      
       </div>

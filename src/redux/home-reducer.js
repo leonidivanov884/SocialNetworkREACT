@@ -7,22 +7,41 @@ let initialState = {
       id: 1,
       date: '14 May 2021',
       text: 'Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow',
-      tags: 'Front end , ASDads' 
     },
     {
       id: 2,
       date: '12 May 2021',
       text: 'The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow',
-      tags: 'Web Design'  
     },
     {
       id: 3,
       date: '12 May 2021',
       text: 'The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow',
-      tags: 'Web Design'  
     }
   ],
-  newPostText: ''  
+  newPostText: '',
+
+  info: {
+    avatar: 'https://vraki.net/sites/default/files/inline/images/3_370.jpg',
+    baner: 'https://miro.medium.com/max/876/1*9Is8boeyB3vkzNs4uwF95g.png',
+    name: 'Leonid Ivanov',
+    login: '@LeonidIvanovWeb',
+    socials: {
+      github: 'https://github.com/leonidivanov884',
+      linkedin: 'linkinvk',
+      vk: 'linkinvk',
+      telegram: 'linkinvk',
+      instagram: '',
+      facebook: '',
+    },
+    contacts: {
+      phone: '79120381324',
+      birthday: '14 January 1999',
+      geo: 'Russia: Ekaterinburg',    
+    },
+    tags: [ '#Front-end','#HTML','#CSS','#JS','#React','#Web-design' ],
+    desc: 'Front end developer. Specializing in react. I love reading and active recreation',
+  }
 }
 
 
@@ -30,9 +49,16 @@ const homeReducer = (state = initialState , action) => {
 
   switch(action.type){
     case ADD_POST: 
+      var date = new Date();
+      var day = date.getDay();   
+      day = day <= 10 ? '0' + day : day;
+     
+      const month = date.toLocaleString('en-us', { month: 'long' });
+      var year = date.getFullYear();    
+
       let newPost = {
         id: 4,
-        date: '12 May 2021',
+        date: `${day} ${month} ${year}`,
         text: state.newPostText,
         tags: 'Web Design'
       }      
