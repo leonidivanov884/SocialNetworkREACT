@@ -16,7 +16,7 @@ function HomePosts (props) {
   
   return (
     <div className={s.posts}>     
-      <Area newPostText={props.homePage.newPostText} onAddPost={props.onAddPost} onNewText={props.onNewText}  />
+      <Area newPostText={props.homePage.newPostText} home={props.home} onAddPost={props.onAddPost} onNewText={props.onNewText}  />
        {
         props.homePage.posts.map( (p) =>  <Post date={p.date} text={p.text} tags={p.tags} />  )
        }

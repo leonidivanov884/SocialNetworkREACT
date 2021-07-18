@@ -23,10 +23,7 @@ const messagesReducer = (state = initialState , action) => {
         newMessageText: action.text
       }     
     case ADD_MESSAGE:         
-      let stateCopy = {
-        ...state, 
-           
-      };
+      let stateCopy = {...state};
       stateCopy.messages[action.nomber].text = [...state.messages[action.nomber].text];      
       stateCopy.messages[action.nomber].text.push(stateCopy.newMessageText)  
       stateCopy.newMessageText = ''    

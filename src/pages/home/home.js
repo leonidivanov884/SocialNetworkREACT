@@ -1,12 +1,12 @@
 import React from "react";
-import HomeTags from "./hometags/hometags";
 import s from './home.module.css'
-import HomePostsContainer from './homeposts/homepostsContainer';
-import HomeBanerContainer from './homebaner/homeBanerContainer';
-import HomeInfoContainer from './homeinfo/homeinfoContainer';
-import HomeContactsContainer from './homecontacts/homecontactsContainer';
-import HomeDescContainer from './homedesc/homedescContainer';
-import HomePanelContainer from './homepanel/homepanelContainer';
+import HomePostsContainer from './posts/homepostsContainer';
+import HomeBanerContainer from './baner/homeBanerContainer';
+import HomeInfoContainer from './info/homeinfoContainer';
+import HomeContactsContainer from './contacts/homecontactsContainer';
+import HomeDescContainer from './desc/homedescContainer';
+import HomePanelContainer from './panel/homepanelContainer';
+import HomeTagsContainer from './tags/hometagsContainer';
 
 
 
@@ -17,7 +17,7 @@ function Home(props){
    <div className={s.home}>
       <HomeBanerContainer />      
       <HomeInfoContainer />
-      <HomeTags />  
+      <HomeTagsContainer />  
       <HomeDescContainer />
      
 

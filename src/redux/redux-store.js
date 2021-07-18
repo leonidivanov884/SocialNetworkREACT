@@ -12,7 +12,6 @@ let reducers = combineReducers({
   messagesPage: messagesReducer,
   bodyTheme: themeReducer,
   friendsPage: friendsReducer,
-  usersPage: userReducer,
   photosPage: photosReducer,
   newsPage: newsReducer,
   users: userReducer,

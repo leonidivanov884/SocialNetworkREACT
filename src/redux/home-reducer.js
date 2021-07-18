@@ -1,7 +1,8 @@
 export const ADD_POST = 'ADD-POST';
 export const CHANGE_AREA = 'CHANGE-AREA';
 
-let initialState = {  
+let initialState = { 
+  home: true, 
   posts:  [  
     {
       id: 1,
@@ -49,24 +50,27 @@ const homeReducer = (state = initialState , action) => {
 
   switch(action.type){
     case ADD_POST: 
-      var date = new Date();
-      var day = date.getDay();   
-      day = day <= 10 ? '0' + day : day;
-     
-      const month = date.toLocaleString('en-us', { month: 'long' });
-      var year = date.getFullYear();    
+      if ( state.newPostText !== '' && state.newPostText !== undefined){
+        var date = new Date();
+        var day = date.getDay();   
+        day = day <= 10 ? '0' + day : day;
+      
+        const month = date.toLocaleString('en-us', { month: 'long' });
+        var year = date.getFullYear();    
 
-      let newPost = {
-        id: 4,
-        date: `${day} ${month} ${year}`,
-        text: state.newPostText,
-        tags: 'Web Design'
-      }      
-      return {
-        ...state,
-        posts: [...state.posts, newPost],
-        newPostText: ''
-      }    
+        let newPost = {
+          id: 4,
+          date: `${day} ${month} ${year}`,
+          text: state.newPostText,
+          tags: 'Web Design'
+        }      
+        return {
+          ...state,
+          posts: [...state.posts, newPost],
+          newPostText: ''
+        }   
+      }
+       
     case CHANGE_AREA:    
       return {
         ...state,

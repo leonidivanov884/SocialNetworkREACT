@@ -5,8 +5,10 @@ import { newTextActionCreator, addPostActionCreator } from '../../../redux/home-
 
 
 let mapStateToProps = (state) => {
+  
   return {
-    homePage: state.homePage
+    homePage: state.homePage,
+    home: state.homePage.home,   
   }
 }
 let mapDispatchToProps = (dispatch) => {

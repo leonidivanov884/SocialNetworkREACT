@@ -11,7 +11,6 @@ const themeReducer = (state = initialState, action) => {
     case CHANGE_THEME:       
       let copyState = {...state}
       copyState = copyState.bodyTheme == 'dark' ? 'light' : 'dark'
-      console.log(copyState);
       return copyState    
     default: 
       return state

@@ -7,7 +7,7 @@ let mapStateToProps = (state) => {
       
   return {
     homeInfo: state.homePage.info,
-   
+    home: state.homePage.home,   
   }
   
 }

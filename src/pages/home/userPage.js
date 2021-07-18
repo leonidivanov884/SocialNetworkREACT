@@ -1,31 +1,37 @@
 import React from "react";
-import HomeTags from "./hometags/hometags";
-import HomePanel from "./homepanel/homepanel";
 import s from './home.module.css'
-import HomePostsContainer from './homeposts/homepostsContainer';
-import HomeBanerContainer from './homebaner/homeBanerContainer';
-import HomeInfoContainer from './homeinfo/homeinfoContainer';
-import HomeContactsContainer from './homecontacts/homecontactsContainer';
-import HomeDescContainer from './homedesc/homedescContainer';
+import UserPostsContainer from './posts/userpostsContainer';
+import UserBanerContainer from './baner/userBanerContainer';
+import UserInfoContainer from './info/userinfoContainer';
+import UserContactsContainer from './contacts/usercontactsContainer';
+import UserDescContainer from './desc/userdescContainer';
+import UserTagsContainer from './tags/usertagsContainer';
+import UserPanelContainer from './panel/userpanelContainer';
 
-
+import * as axios from 'axios';
 
 
 function UserPage(){
   
+  // axios.get("https://leonidivanov884.github.io/SocialNetworkREACT/src/api/users.json").then(response => {
+  //   debugger
+  // })
+
+
+
   return (
    <div className={s.home}>
-      <HomeBanerContainer />      
-      <HomeInfoContainer />
-      <HomeTags />  
-      <HomeDescContainer />
+      <UserBanerContainer />      
+      <UserInfoContainer />
+      <UserTagsContainer />  
+      <UserDescContainer />
      
-
-      <HomeContactsContainer />
-      <HomePanel />
-      <HomePostsContainer  />    
+      <UserContactsContainer />
+      <UserPanelContainer />
+      <UserPostsContainer  />    
     </div>
   )
 }
+
 
 export default UserPage;
