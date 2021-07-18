@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from 'react-redux';
 import HomePosts from './homeposts';
-import { newTextActionCreator, addPostActionCreator } from '../../../redux/home-reducer';
+import { onNewText, onAddPost } from '../../../redux/home-reducer';
 
 
 let mapStateToProps = (state) => {
@@ -10,19 +10,8 @@ let mapStateToProps = (state) => {
     homePage: state.users.oneuser
   }
 }
-let mapDispatchToProps = (dispatch) => {
-  return { 
-    onNewText: (text) => {   
-      dispatch(newTextActionCreator(text));
-    },
-    onAddPost: () => { 
-      dispatch( addPostActionCreator() );  
-    }
-  }
-}
 
-
-const UserPostsContainer = connect(mapStateToProps , mapDispatchToProps)(HomePosts)
+const UserPostsContainer = connect(mapStateToProps , {onNewText, onAddPost})(HomePosts)
 
 export default UserPostsContainer;
 

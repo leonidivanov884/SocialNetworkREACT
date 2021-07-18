@@ -7,17 +7,10 @@ import { togglefollow } from '../../../redux/users-reducer';
 let mapStateToProps = (state) => {        
   return {
     homeInfo: state.users.oneuser.info,   
-  }
-  
+  }  
 }
-let mapDispatchToProps = (dispatch) => {
-  return {  
-    togglefollow: () => {      
-      dispatch(togglefollow())
-    }  
-  }
-}
-const UserInfoContainer = connect(mapStateToProps , mapDispatchToProps)(HomeInfo)
+
+const UserInfoContainer = connect(mapStateToProps , {togglefollow })(HomeInfo)
 
 export default UserInfoContainer;
 

@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { onSetUsers } from '../../../redux/users-reducer';
+import { setUsers } from '../../../redux/users-reducer';
 import axios from 'axios';
 import MyFriends from './myfriends';
 
@@ -21,14 +21,8 @@ let mapStateToProps = (state) => {
     users: state.users.users
   }  
 }
-let mapDispatchToProps = (dispatch) => {
-  return {  
-    setUsers: (users) => {      
-      dispatch(onSetUsers(users))
-    }  
-  }
-}
-const MyFriendsContainer = connect(mapStateToProps , mapDispatchToProps)(MyFriendsApi)
+
+const MyFriendsContainer = connect(mapStateToProps , { setUsers })(MyFriendsApi)
 
 export default MyFriendsContainer;
 

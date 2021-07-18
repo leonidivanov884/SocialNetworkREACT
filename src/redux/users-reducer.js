@@ -1,5 +1,6 @@
 export const FOLLOW = 'FOLLOW';
 export const SETUSERS = 'SET_USERS';
+export const TOGGLELOAD = 'TOGGLE_LOAD';
 
 let initialState = {  
   oneuser: {
@@ -63,7 +64,8 @@ let initialState = {
     ],
     newPostText: '',  
   },
-  users: []
+  users: [],
+  isLoading: false
 }
 
 
@@ -79,19 +81,31 @@ const userReducer = (state = initialState, action) => {
     case SETUSERS:    
       return {...state, users: action.users}  
 
+    case TOGGLELOAD:          
+      let stateCopy2 = {...state}      
+      stateCopy2.isLoading = stateCopy2.isLoading == false ? true : false
+      return stateCopy2
+
+     
+
     default: 
       return state
   }  
 }
 
-
+export const toggleLoad = () => {
+  
+  return {
+    type: TOGGLELOAD
+  }
+}
 
 export const togglefollow = () => {
   return {
     type: FOLLOW
   }
 }
-export const onSetUsers = (users) => {
+export const setUsers = (users) => {
   return {
     type: SETUSERS,
     users: users

@@ -42,13 +42,13 @@ const photosReducer = (state = initialState , action) => {
   
 }
 
-export const addPhoto = (imgsrc) => {
+export const onAddPhoto = (imgsrc) => {
   return {
     type: ADD_PHOTO,
     imgsrc: imgsrc
   }
 }
-export const deletePhoto = (id) => {
+export const onDeletePhoto = (id) => {
   return {
     type: DELETE_PHOTO,
     id: id

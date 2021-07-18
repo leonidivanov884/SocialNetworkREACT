@@ -81,12 +81,12 @@ const homeReducer = (state = initialState , action) => {
   }   
 }
 
-export const addPostActionCreator = () => {
+export const onAddPost = () => {
   return {
     type: ADD_POST
   }
 }
-export const newTextActionCreator = (text) => {
+export const onNewText = (text) => {
   return {
     type: CHANGE_AREA,
     text: text 

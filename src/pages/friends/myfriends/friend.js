@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 function Friend(props){
+  
   if (props.friend) {
       return (
         <li>

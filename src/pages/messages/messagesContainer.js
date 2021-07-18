@@ -1,7 +1,7 @@
 import React from "react";
 import Messages from './messages';
 import { connect } from 'react-redux';
-import { changeMessageActionCreator, addMessageActionCreator } from '../../redux/messages-reducer';
+import { onNewMessageText, onAddMessage } from '../../redux/messages-reducer';
 
 
 let mapStateToProps = (state) => {
@@ -9,17 +9,8 @@ let mapStateToProps = (state) => {
     messagesPage: state.messagesPage
   }
 }
-let mapDispatchToProps = (dispatch) => {
-  return {
-    onNewMessageText: (text) => {  
-      dispatch( changeMessageActionCreator(text)); 
-    },
-    onAddMessage: (nomber) => { 
-      dispatch( addMessageActionCreator(nomber) );  
-    }
-  }
-}
-const MessagesContainer = connect(mapStateToProps , mapDispatchToProps)(Messages)
+
+const MessagesContainer = connect(mapStateToProps , {onNewMessageText, onAddMessage})(Messages)
 
 export default MessagesContainer;
 
