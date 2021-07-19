@@ -7,7 +7,7 @@ import Users from './users';
 class UsersApi extends React.Component {
   componentDidMount() {
     this.props.toggleLoad()
-    axios.get("http://localhost:8000/users").then(response => {
+    axios.get("https://leonidivanov884.github.io/SocialNetworkREACT/src/psevdoapi/users/users.json").then(response => {
       debugger
       this.props.setUsers(response.data)
         
