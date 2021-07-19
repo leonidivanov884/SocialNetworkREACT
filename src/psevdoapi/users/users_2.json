@@ -1,0 +1,72 @@
+[
+  {
+ 
+    "info": {   
+      "id": 2,   
+      "friends": true,
+      "baner": "https://guruadvisor.net/media/com_yendifevents/events/39/angular-day5bbf6c47ca93d.jpg",
+      "login": "@LeonidIvanovWeb",
+      "avatar": "https://скачать-ватсап-бесплатно.рус/wp-content/uploads/2018/10/avatarka-dlya-devushek-vatsap-1.jpg",
+      "name": "Kail XY",
+      "date": "10.12.2019",
+      "socials": {
+        "github": "linkingithub",
+        "linkedin": "linkinvk",
+        "vk": "linkinvk",
+        "telegram": "linkinvk",
+        "instagram": "linkininstagram",
+        "facebook": "linkinfacebook"
+      },
+      "contacts": {
+        "phone": "79782598740",
+        "birthday": "26 March 2002",
+        "geo": "Russia: Moskow"
+      },
+      "tags": [
+        "#DEV",
+        "#FACEBOOK",
+        "#BACK"
+      ],
+      "desc": "Backend developer in facebook"
+    },
+    "messageForYou": [
+      "Hello",
+      "How are you",
+      "Cool :3",
+      "Yes, i`m so happy"
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "date": "14 May 2021",
+        "text": "Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow"
+      },
+      {
+        "id": 2,
+        "date": "11 May 2021",
+        "text": "Ырупнейшая коллекция бесплатных качественных аватарок для форумов и ... Скачать ав "
+      },
+      {
+        "id": 4,
+        "date": "09 May 2021",
+        "text": "Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow"
+      },
+      {
+        "id": 5,
+        "date": "05 May 2021",
+        "text": "Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow"
+      },
+      {
+        "id": 6,
+        "date": "06 May 2021",
+        "text": "Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow"
+      },
+      {
+        "id": 7,
+        "date": "02 May 2021",
+        "text": "Chrome DevTools has become a must when it comes to modern web development. The tool is so powerful in performance and functionality, making the environment better and the process easier for many developers. I am sharing the most important keyboard shortcuts. 👉Follow"
+      }
+    ],
+    "newPostText": ""
+  }
+]

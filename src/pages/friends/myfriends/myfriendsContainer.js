@@ -6,7 +6,8 @@ import MyFriends from './myfriends';
 
 class MyFriendsApi extends React.Component {
   componentDidMount(){
-    axios.get("https://leonidivanov884.github.io/SocialNetworkREACT/src/api/users.json").then(response => {
+    axios.get("https://leonid.deviant.group/api/users/users.json").then(response => {   
+      debugger    
       this.props.setUsers(response.data)
     })
   }

@@ -7,9 +7,10 @@ import Users from './users';
 class UsersApi extends React.Component {
   componentDidMount() {
     this.props.toggleLoad()
-    axios.get("https://leonidivanov884.github.io/SocialNetworkREACT/src/api/users.json").then(response => {
+    axios.get("http://localhost:8000/users").then(response => {
+      debugger
       this.props.setUsers(response.data)
-      
+        
     }).then(this.props.toggleLoad())
   }
 
